@@ -50,6 +50,7 @@ class WeatherDetailsController: UIViewController {
             fetchOldData()
         } else {
             ai.isHidden = false
+            ai.startAnimating()
             fetchNewData()
         }
 
