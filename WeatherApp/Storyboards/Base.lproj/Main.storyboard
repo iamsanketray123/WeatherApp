@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pEw-5w-ag7">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHn-cg-Mf7">
+                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zn-sN-JND">
+                                        <rect key="frame" x="12" y="12" width="351" height="44"/>
+                                        <color key="backgroundColor" red="0.11820373204386103" green="0.56657286729857814" blue="0.27835663747651423" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="vxB-Yo-6mD"/>
+                                        </constraints>
+                                        <state key="normal" title="Get Weather Report">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="displayWeatherDetails:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jzy-f7-j9N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="8yf-be-v3V"/>
+                                    <constraint firstItem="9zn-sN-JND" firstAttribute="top" secondItem="dHn-cg-Mf7" secondAttribute="top" constant="12" id="Vo6-Cx-QU3"/>
+                                    <constraint firstItem="9zn-sN-JND" firstAttribute="leading" secondItem="dHn-cg-Mf7" secondAttribute="leading" constant="12" id="YQe-xB-YOq"/>
+                                    <constraint firstAttribute="trailing" secondItem="9zn-sN-JND" secondAttribute="trailing" constant="12" id="gee-fN-xhT"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RJK-9U-jIK">
+                                <rect key="frame" x="8" y="0.0" width="359" height="583"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dHn-cg-Mf7" firstAttribute="top" secondItem="RJK-9U-jIK" secondAttribute="bottom" constant="16" id="1jn-u8-l7n"/>
+                            <constraint firstItem="RJK-9U-jIK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="2gs-SW-7Cv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RJK-9U-jIK" secondAttribute="trailing" constant="8" id="2qh-8L-8zx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dHn-cg-Mf7" secondAttribute="trailing" id="Bfn-5m-6iT"/>
+                            <constraint firstAttribute="bottom" secondItem="dHn-cg-Mf7" secondAttribute="bottom" id="STw-3S-Rm8"/>
+                            <constraint firstItem="RJK-9U-jIK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kMV-mS-Zdx"/>
+                            <constraint firstItem="dHn-cg-Mf7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="us7-OZ-mS7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pIK-lq-dxT"/>
+                    <connections>
+                        <outlet property="bottomContainer" destination="dHn-cg-Mf7" id="Ss3-wv-jQO"/>
+                        <outlet property="map" destination="RJK-9U-jIK" id="bck-4X-tS3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UIc-xR-6ri">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pEw-5w-ag7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wU5-iH-426">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8bg-Pw-a0v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWu-xX-E8x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
